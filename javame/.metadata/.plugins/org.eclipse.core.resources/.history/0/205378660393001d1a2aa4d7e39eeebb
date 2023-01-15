@@ -1,0 +1,38 @@
+import acc.Account;
+import acc.SpecialAccount;
+
+public class AccountTest2 {
+	static Account[] accs = new Account[100];
+	static int count = 0;
+	
+	static void makeAccount(Account acc) {
+		accs[count++] = acc;
+	}
+	
+	static void printAllAccount() {
+		for(int i=0; i<count; i++) {
+			System.out.println(accs[i].info());
+		}
+		
+	}
+	static void printSpecialAccount() {
+		for(int i=0; i<count; i++) {
+			if(accs[i] instanceof SpecialAccount) {
+				System.out.println(accs[i].info());
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+//		accs[0] = new Account(101, "홍길도",10000);
+//		accs[1] = new SpecialAccount(102, "고길동",20000,"VIP");
+		makeAccount(new Account(101, "홍길도", 10000));
+		makeAccount(new SpecialAccount(102, "고길동", 20000, "VIP"));
+//		printAllAccount();
+		printSpecialAccount();
+	}
+
+
+	
+
+}
