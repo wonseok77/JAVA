@@ -41,7 +41,7 @@ public class Array2DTest {
 				arry3[3][4] += arry3[i][j];
 			}
 			arry3[i][4] = rtot;
-			System.out.println(rtot);
+		System.out.println(rtot);
 		}
 		
 		for(int i = 0; i<arry3[0].length-1; i++) {
