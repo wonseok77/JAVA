@@ -114,9 +114,8 @@ void printAllEmployee() {
 		for(int i = 0; i < count; i++) {
 			total += emps[i].getPay();
 		}
-		
 		return total;
-	}  
+	}
     메서드에 type을 지정하는것이 적응이 안되니 익숙해지도록 하자  
     이건 단순 집계연산 형태이니 기억해두고 응용하자  
     
