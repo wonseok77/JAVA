@@ -11,7 +11,6 @@ public class EmployeeMain {
 		com.printAllEmployee();
 		System.out.println("총 급여: " + com.getTotalPay());
 	}
-
 }
 
 // 출력
