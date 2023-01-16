@@ -78,49 +78,49 @@ Java만이 아닌 모든 객체지향의 특징이다
 
 
 ##### Employee 실습
-(Company) Main에서 실행할 메서드 정의
-(EmployeeMain) Main에서는 최상위 class의 메서드 호출 및 실행
-(Employee) 최상위 부모 class에서는 공유할 멤버 정의, 출력 기본형식 정의 toString(), 추상메서드 getPay() 정의 -> class명에 abstract
-(Permanent) extends Employee 상속, 생성자에 pay 추가, 추상메서드 getPay() 오버라이딩(return pay)
-(Sales) extends Permanent 상속, incentive 멤버 추가, getPay() 오버라이딩 (return super.getPay() + incentive)
-(PartTime) extends Employee, 멤버 추가 payPerTime, time, getPay() 오버라이딩 (return payPerTime * time), toString() 오버라이딩  
-return(super.toString() + ", 근무시간 : " + time + ", 시급 : " + payPerTime)  
+(Company) Main에서 실행할 메서드 정의  
+(EmployeeMain) Main에서는 최상위 class의 메서드 호출 및 실행  
+(Employee) 최상위 부모 class에서는 공유할 멤버 정의, 출력 기본형식 정의 toString(), 추상메서드 getPay() 정의 -> class명에 abstract  
+(Permanent) extends Employee 상속, 생성자에 pay 추가, 추상메서드 getPay() 오버라이딩(return pay)  
+(Sales) extends Permanent 상속, incentive 멤버 추가, getPay() 오버라이딩 (return super.getPay() + incentive)  
+(PartTime) extends Employee, 멤버 추가 payPerTime, time, getPay() 오버라이딩 (return payPerTime * time), toString() 오버라이딩    
+return(super.toString() + ", 근무시간 : " + time + ", 시급 : " + payPerTime)    
 
-##### 코드 어려웠던점(생소했던 점)
+##### 코드 어려웠던점(생소했던 점)  
 
 Employee[] emps = new Employee[10];  
 배열이긴 배열인데 클래스를 담는 배열인건가 ? 그러면 배열 한 칸당 클래스 멤버들이 다 할당되는건가 ?  
   
-void regEmployee(Employee emp) {
-		emps[count++] = emp;
-	}
-  
-  매개변수로 클래스를 받는구나... 자료형이라고 생각하는게 맞겠다
-  com.regEmployee(new Permanent(101, "홍길동", 100000));  
-  이런식으로 클래스에 매개변수가 들어간 형태를 reg 메서드에 매개변수로 넣어주는 형태 기억하기  
+void regEmployee(Employee emp) {  
+		emps[count++] = emp;  
+	}  
+    
+  매개변수로 클래스를 받는구나... 자료형이라고 생각하는게 맞겠다  
+  com.regEmployee(new Permanent(101, "홍길동", 100000));    
+  이런식으로 클래스에 매개변수가 들어간 형태를 reg 메서드에 매개변수로 넣어주는 형태 기억하기   
   
    
-void printAllEmployee() {
-		for(int i = 0; i < count; i++) {
-			System.out.println(emps[i]);
-		}
-	}
+void printAllEmployee() {  
+		for(int i = 0; i < count; i++) {  
+			System.out.println(emps[i]);  
+		}  
+	}  
   
   클래스가 저장된 배열을 출력하면 각각 regEmployee에 input된 형태로 저장된것을  
   반복문으로 출력해 주는구나  
   
-   int getTotalPay() {
-		int total = 0;
-		for(int i = 0; i < count; i++) {
-			total += emps[i].getPay();
-		}
-		return total;
-	}
+   int getTotalPay() {  
+		int total = 0;  
+		for(int i = 0; i < count; i++) {  
+			total += emps[i].getPay();  
+		}  
+		return total;  
+	}  
     메서드에 type을 지정하는것이 적응이 안되니 익숙해지도록 하자  
     이건 단순 집계연산 형태이니 기억해두고 응용하자  
     
-##### 실습 Feedback
-코드가 직관적으로 잘 해석되지 않는 부분을 모아보니까  
+##### 실습 Feedback  
+코드가 직관적으로 잘 해석되지 않는 부분을 모아보니까    
 대부분 Main에서 실행할 메서드를 만드는 부분과 Main에서 실행하는 부분이었다  
 이러한 부분의 기본형을 눈에 익히고 익숙해지도록 노력하자 ! 
     
