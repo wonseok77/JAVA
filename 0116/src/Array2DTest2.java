@@ -36,7 +36,8 @@ public class Array2DTest2 {
 		for(int i = 0; i<arry4.length-1; i++) {
 			for(int j = 0; j<arry4.length-1; j++) {
 				System.out.println(arry4[i][j] +'\t'); 
-			} // '\t'을 하니까 값이 이상해진다 무슨의미일까 ??
+			} // '\t'을 하니까 값이 이상해진다 무슨의미일까 ?? ASCII코드가 입력되어서 숫자계산에 반영된듯
+			  // SOL) "\t"를 하면 의도대로 잘 나온다
 			System.out.println();
 		}
 	}
