@@ -49,7 +49,16 @@ new Person < - 객체
 
 ##### 연산  
 and 연산 특) 앞에가 False면 뒤에까지 읽지 않는다   
-or 연산 특) 앞에 True면 뒤에까지 연산하지 않는다  
+or 연산 특) 앞에 True면 뒤에까지 연산하지 않는다 
+
+##### 접근 제한자  
+     | 외부 클래스 | 하위 클래스 | 동일 패키지 | 내부 클래스 
+--|--|--|--|---
+public | O | O | O | O 
+protected | X | O | O | O
+default(선언x) | X | X | O | O |
+private | X | X | X | O  
+
 
 ##### 0113 final 접근제한자 의미  
 static이 아닌 final을 쓰는 이유는 생성자에서만 한번 초기화 할 수 있는 권한을 준다는 의미  
